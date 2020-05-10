@@ -1,0 +1,17 @@
+.filler {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 10vh !important;
+}
+
+.nav-icon {
+  color: #fff;
+  text-decoration: none;
+  :hover {
+    color: darken(#fff, 20%);
+    cursor: pointer;
+  }
+}

@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #4089ff,
+    #ff9100,
+    #23a6d5,
+    #ff24ff
+  );
+  background-size: 270% 270%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
