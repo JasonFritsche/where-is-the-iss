@@ -116,6 +116,14 @@
               "devServerTarget": "iss:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://jasonfritsche.github.io/where-is-the-iss/",
+            "name": "Where Is the ISS",
+            "email": "jrdevforlife@gmail.com"
+          }
         }
       }
     }
