@@ -3,3 +3,10 @@ main {
   flex-flow: column;
   align-items: stretch;
 }
+
+.app-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
