@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+/* ======== Custom Theme ======== */
+$iss-primary: mat-palette($mat-blue-gray, 900);
+$iss-accent: mat-palette($mat-light-blue, 700);
+$iss-warn: mat-palette($mat-pink, 600);
+
+$iss-theme: mat-dark-theme($iss-primary, $iss-accent, $iss-warn);
+
+@include angular-material-theme($iss-theme);
