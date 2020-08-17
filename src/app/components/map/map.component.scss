@@ -1,3 +1,10 @@
+.app-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
 .map {
   height: 80vh;
   width: 80vw;
