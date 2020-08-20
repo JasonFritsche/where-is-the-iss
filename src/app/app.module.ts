@@ -15,7 +15,6 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import { CrewComponent } from './components/crew/crew.component';
 import { ElevationDirective } from './directives/elevation.directive';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { ElevationDirective } from './directives/elevation.directive';
     MapComponent,
     NavbarComponent,
     SideNavComponent,
-    CrewComponent,
     ElevationDirective,
   ],
   imports: [
