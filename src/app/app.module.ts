@@ -14,10 +14,19 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { CrewComponent } from './components/crew/crew.component';
+import { ElevationDirective } from './directives/elevation.directive';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, NavbarComponent, SideNavComponent, CrewComponent],
+  declarations: [
+    AppComponent,
+    MapComponent,
+    NavbarComponent,
+    SideNavComponent,
+    CrewComponent,
+    ElevationDirective,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +38,7 @@ import { CrewComponent } from './components/crew/crew.component';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
