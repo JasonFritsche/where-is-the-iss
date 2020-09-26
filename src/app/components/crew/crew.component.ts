@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CrewService } from 'src/app/services/crew.service';
-import { ICrewResult } from 'src/app/models/ICrewResult';
 
 @Component({
   selector: 'app-crew',
@@ -8,16 +6,20 @@ import { ICrewResult } from 'src/app/models/ICrewResult';
   styleUrls: ['./crew.component.scss'],
 })
 export class CrewComponent implements OnInit {
-  constructor(private crewService: CrewService) {}
+  constructor() {}
 
-  public crewData: Array<any> = [];
-  public crewSize: number = null;
+  public crewData: Array<any> = [
+    {
+      name: 'Chris Cassidy',
+    },
+    {
+      name: 'Anatoly Ivanishin',
+    },
+    {
+      name: 'Ivan Vagner',
+    },
+  ];
+  public crewSize: number = 3;
 
-  ngOnInit(): void {
-    this.crewService.getCrew().subscribe((res: ICrewResult) => {
-      this.crewData = res.people;
-      this.crewSize = res.number;
-      console.log(this.crewData);
-    });
-  }
+  ngOnInit(): void {}
 }
