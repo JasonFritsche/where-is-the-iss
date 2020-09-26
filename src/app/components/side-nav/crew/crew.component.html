@@ -1,1 +1,10 @@
-<p>crew works!</p>
+<div class="crew-container">
+  <div class="crew-heading">
+    <h1>Crew Size: {{ crewSize }}</h1>
+  </div>
+  <div class="crew-names">
+    <mat-card appElevation *ngFor="let crew of crewData">
+      {{ crew["name"] }}
+    </mat-card>
+  </div>
+</div>
