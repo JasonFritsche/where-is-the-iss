@@ -24,6 +24,7 @@ export class MapComponent implements AfterViewInit, OnInit, OnDestroy {
   private _markers = new L.LayerGroup();
   private _bounds: Array<number>;
   private _locationSubscription: Subscription;
+  private _centerMap: boolean;
 
   constructor(private locationService: IssLocationService) {}
 
@@ -45,7 +46,6 @@ export class MapComponent implements AfterViewInit, OnInit, OnDestroy {
 
   /**
    * loads the map
-   * todo: center in on the ISS icon when map loads
    */
   private _loadMap() {
     this.map = L.map('map', {
@@ -65,6 +65,7 @@ export class MapComponent implements AfterViewInit, OnInit, OnDestroy {
 
     tiles.addTo(this.map);
     this._markers.addTo(this.map);
+    this._centerMap = true;
   }
 
   ngOnInit(): void {
@@ -78,6 +79,11 @@ export class MapComponent implements AfterViewInit, OnInit, OnDestroy {
         ];
 
         this._loadIssImg(this._bounds);
+
+        if (this._centerMap) {
+          this._centerMap = false;
+          this.map.panTo(this._bounds);
+        }
       });
   }
 
