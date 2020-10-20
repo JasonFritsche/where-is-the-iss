@@ -78,6 +78,7 @@ export class MapComponent implements AfterViewInit, OnInit, OnDestroy {
         ];
 
         this._loadIssImg(this._bounds);
+        this.map.panTo(this._bounds);
       });
   }
 
