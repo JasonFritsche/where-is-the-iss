@@ -53,6 +53,15 @@ export class MapComponent implements AfterViewInit, OnInit, OnDestroy {
       zoom: 3,
     });
 
+    let southWest = L.latLng(-89.98155760646617, 180), //vertical boundaries, horizontal boundaries
+      northEast = L.latLng(89.99346179538875, -180);
+    let bounds = L.latLngBounds(southWest, northEast);
+
+    this.map.setMaxBounds(bounds);
+    this.map.on('drag', () => {
+      this.map.panInsideBounds(bounds, { animate: false });
+    });
+
     const tiles = L.tileLayer(
       'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {
