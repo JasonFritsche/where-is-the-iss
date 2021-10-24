@@ -6,14 +6,3 @@
 .mat-toolbar-single-row {
   height: 10vh !important;
 }
-
-.nav-icon {
-  padding-top: 6px;
-  margin-right: 1.2em;
-  color: #fff;
-  text-decoration: none;
-  :hover {
-    color: darken(#fff, 20%);
-    cursor: pointer;
-  }
-}
