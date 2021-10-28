@@ -1,17 +1,17 @@
 <mat-toolbar color="primary">
-  <a class="nav-icon">
+  <button mat-icon-button>
     <mat-icon (click)="toggleSideNav()">menu</mat-icon>
-  </a>
+  </button>
   <h1>Where is the ISS?</h1>
 
   <!-- This fills the remaining space of the current row -->
   <span class="filler"></span>
   <a
+    mat-icon-button
     matTooltip="View Source/Contribute"
     aria-label="Link to source code"
     target="_blank"
     href="https://github.com/JasonFritsche/where-is-the-iss"
-    class="nav-icon"
     ><i class="icon-github icon-2x"></i
   ></a>
 </mat-toolbar>
